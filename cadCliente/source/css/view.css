@@ -1,0 +1,44 @@
+/* Pretty Stuff 
+================================== */
+
+body {
+  /*font: 100%/1.6 "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;*/
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Centering Technique
+================================== */
+
+body { 
+  text-align: center; 
+  min-width: 760px;
+}
+
+#wrapper { 
+  width: 720px; 
+  margin: 0 auto; 
+  text-align: left; 
+} 
+
+.view{
+	font-size: 14px;
+	color:#222;
+}
+.view2{
+	font-size: 14px;
+	color: gray;
+}
+
+a{
+text-decoration:none;
+}
+
+<!--
+-->

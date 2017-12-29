@@ -1,0 +1,46 @@
+ Instalação em ambiente Linux
+ ----------------------------
+
+ - Copie a pasta cadCliente para /var/www/html/
+
+ - No terminal de comandos navegue até /var/www/html/ e dê a permissão 755 recursiva
+
+ ex: ~$ chmod 755 -R cadCliente/
+
+
+ - No navegador acesse o PhpMyadmin http://localhost/phpmyadmin efetue login
+
+ - Crie a base de dados php_mysql e importe o arquivo php_mysql.sql para que sejam criadas 
+   e populadas as tabelas da base
+
+ - Acesse o arquivo Conexao.class.php em /var/www/html/cadCliente/source/php/ e altere as 
+   variáveis $user e $pass com o seu usuário e senha, ou então crie um novo usuário com 
+   os dados das variáveis caso seje de sua preferência.
+
+ - Feito isso basta acessar no navegador http://localhost/cadCliente para visualizar a aplicação de cadastro de clientes
+   desenvolvida no curso. O login e senha de administrador são: 'admin', 'admin'. E de usuário comum são: 'usuario', 'usuario'
+   
+
+ Instalação em ambiente Windows
+ ------------------------------
+
+ - Para instalar em ambiente windows pasta instalar um servidor web que dê suporte a php e MySQL. Os mais comuns são: Wamp, Xampp e AppServ.
+
+ - Tomando como exemplo a instalação com AppServ, copie a pasta cadCliente para c:\AppServ\www\.
+v
+ - Siga as mesmas instruções de criação da base dentro do PhpMyAdmin e altere também o arquivo Conexao.class.php dentro de 
+   c:\AppServ\cadCliente\source\php\ modificando os valores das variáveis $user e $pass com o seu usuário e senha do MySQL.
+
+ - No navegador acesse da mesma forma a aplicação através de http://localhost/cadCliente com os mesmos usuários e senha informados
+   na instalação em ambiente Linux.
+
+ Obs: Se por ventura ao abrir o aplicativo no navegador aparacer vários erros e avisos, siga as instruções abaixo:   
+
+      Edite o arquivo php.ini, comentando a seguinte linha: 'error_reporting = E_ALL & '~E_NOTICE & ~E_DEPRECATED'.
+      Basta colar ';' no início da linha. No windows, considerando a partir da versão 7 e com sistema em arquitetura 64 bits, o
+      o mesmo será encontrado em: 'C:\wamp64\bin\apache\apache2.4.17\bin\php.ini'. No Linux os WARNINGS e ERROS costumam vir desabilitados,
+      mas se precisar editar o php.ini no Linux o mesmo se encontra em '/etc/php5/apache2/php.ini', isso nas versões Ubuntu a partir da 9.
+      Relembrando que este curso foi desenvolvido para rodar em servidores com apache2 e php5. Na versão acima desta poderá não funcionar,
+      pois o php7 por exemplo só aceita a biblioteca msqli, cuja a qual não foi utilizada no surso.
+
+
